@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 88px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.App-header {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 25px;
+  color: white;
+  background: #555555;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-title {
+  align-items: center;
+  width: 90%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.App-body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.App-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tableFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background: #cccccc
+}
+tr:nth-child(odd) {
+  background: white
+}
+
+.tableHeader > * {
+  background: #555555;
+  color: white;
+}
+
+th, td {
+  padding: 10px 25px;
+}
+
+.deleteButton {
+  border-radius: 4px;
+  background-color: rgb(213, 98, 98);
+  border: 1px solid gray;
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: rgb(191, 88, 88);
+}

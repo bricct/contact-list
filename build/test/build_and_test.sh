@@ -13,7 +13,7 @@ cd ../../frontend
 docker build -t contact_list_frontend:latest -f ../build/Dockerfile.frontend .
 
 # Pull down test data artifact and unpack
-cd ../build/staging
+cd ../build/test
 mkdir -p postgres
 cd postgres
 oras pull quay.io/trey_b/contact_list:latest
@@ -35,5 +35,5 @@ cd ../../frontend
 npx playwright test
 
 # Tear down containers
-cd ../build/staging
+cd ../build/test
 docker-compose down

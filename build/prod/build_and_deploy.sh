@@ -13,7 +13,7 @@ cd ../../frontend
 docker build -t contact_list_frontend:latest -f ../build/Dockerfile.frontend .
 
 # Pull down prod data artifact and unpack
-cd ../build/local
+cd ../build/prod
 mkdir -p postgres
 cd postgres
 oras pull quay.io/trey_b/contact_list:prod

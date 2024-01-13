@@ -1,0 +1,29 @@
+version: "3.1"
+services:
+  contact_db:
+    image: bitnami/postgresql:14
+    ports:
+      - 127.0.0.1:15432:5432
+    volumes:
+      - ./postgres:/bitnami/postgresql:rw
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=contact_list
+      - POSTGRESQL_POSTGRES_PASSWORD=oEUKvZsCjDjbHJLeNW9H8HLnwTNZmcjN
+  contact_frontend:
+    image: contact_list_frontend
+    ports:
+      - 127.0.0.1:3000:3000
+    environment:
+      - REACT_APP_API_URL=http://localhost:5080
+  contact_api:
+    image: contact_list_api
+    ports:
+      - 127.0.0.1:5080:5080
+    environment:
+     - CONTACT_LIST_DB_HOST=contact_db
+     - CONTACT_LIST_DB_PORT=5432
+     - CONTACT_LIST_DB_USER=postgres
+     - CONTACT_LIST_DB_PASSWORD=oEUKvZsCjDjbHJLeNW9H8HLnwTNZmcjN
+     - CONTACT_LIST_DB_NAME=contact_list

@@ -5,7 +5,7 @@ services:
     ports:
       - 127.0.0.1:15432:5432
     volumes:
-      - ../postgres:/bitnami/postgresql:rw
+      - ./postgres:/bitnami/postgresql:rw
     environment:
       - POSTGRESQL_USERNAME=user
       - POSTGRESQL_PASSWORD=password

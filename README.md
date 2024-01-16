@@ -22,6 +22,7 @@
 - Clone the repository
 - Enter the build/local directory
 - Run `./build_and_deploy.sh`
+  - Note: if you are trying to run this on x86 architecture the dotnet publish command will need to be modified slightly
 - Navigate to http://localhost:3000
 - The containers will run until `docker-compose down` is run in the build/local directory
 
@@ -29,5 +30,6 @@
 - Clone the repository
 - Enter the build/test directory
 - Run `./build_and_test.sh`
+  - Note: if you are trying to run this on x86 architecture the dotnet publish command will need to be modified slightly
 - See test results in console
 

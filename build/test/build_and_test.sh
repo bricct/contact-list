@@ -16,7 +16,7 @@ docker build -t contact_list_frontend:latest -f ../build/Dockerfile.frontend .
 cd ../build/test
 mkdir -p postgres
 cd postgres
-oras pull quay.io/trey_b/contact_list:latest
+oras pull quay.io/trey_b/contact_list:test
 tar -xzf datavol.tar.gz
 rm datavol.tar.gz
 cd ..

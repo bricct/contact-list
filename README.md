@@ -17,6 +17,7 @@
 - Docker
 - .NET 8.0
 - Oras Client
+- Playwright
 
 ### Run Locally
 - Clone the repository
